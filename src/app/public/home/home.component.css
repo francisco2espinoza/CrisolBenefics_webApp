@@ -1,0 +1,15 @@
+/* home.component.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea tres columnas de igual tamaño */
+    grid-gap: 10px; /* Espacio entre las celdas */
+    padding: 10px;
+  }
+  
+  .grid-item {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
