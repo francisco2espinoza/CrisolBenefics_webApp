@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  input, button {
+    padding: 10px;
+    margin: 5px;
+  }
+  button {
+    cursor: pointer;
+  }
+  

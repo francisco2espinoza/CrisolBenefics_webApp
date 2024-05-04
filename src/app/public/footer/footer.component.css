@@ -1,0 +1,14 @@
+/* footer.component.css */
+.footer-top {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: grey;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    background-color: darkgrey;
+    padding: 20px;
+  }
+  

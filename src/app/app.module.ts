@@ -8,6 +8,10 @@ import { ExperienciaComponent } from './public/experiencia/experiencia.component
 import { OfertasComponent } from './public/ofertas/ofertas.component';
 import { LanzamientosComponent } from './public/lanzamientos/lanzamientos.component';
 import { MisofertasComponent } from './public/misofertas/misofertas.component';
+import { HeaderComponent } from './public/header/header.component';
+import { FooterComponent } from './public/footer/footer.component';
+import { ExperienciasComponent } from './public/experiencias/experiencias.component';
+import { PromocionesComponent } from './public/promociones/promociones.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { MisofertasComponent } from './public/misofertas/misofertas.component';
     ExperienciaComponent,
     OfertasComponent,
     LanzamientosComponent,
-    MisofertasComponent
+    MisofertasComponent,
+    HeaderComponent,
+    FooterComponent,
+    ExperienciasComponent,
+    PromocionesComponent
   ],
   imports: [
     BrowserModule,

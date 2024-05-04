@@ -1,0 +1,22 @@
+/* header.component.css */
+.header-top {
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .header-bottom {
+    background-color: yellow;
+    padding: 10px 20px;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  nav ul li {
+    padding: 0 10px;
+  }
+  
