@@ -1,28 +1,28 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { OfertasService } from '../../services/ofertas.service';
+import { NgIfContext } from '@angular/common';
 
 @Component({
-  selector: 'app-ofertas',
+  selector: 'app-home',
   templateUrl: './ofertas.component.html',
   styleUrls: ['./ofertas.component.css']
 })
 export class OfertasComponent implements OnInit {
-  public oferItems: any[] = [];
+  ofertas: any[] = [];
+  noData!: TemplateRef<NgIfContext<boolean>> | null;
 
-  constructor() { }
+  constructor(private ofertasService: OfertasService) { }
 
   ngOnInit(): void {
-    // Supongamos que estos datos vienen de una API o base de datos
-    this.oferItems = [
-      { name: 'Item 1', description: 'Descripción del Item 1' },
-      { name: 'Item 2', description: 'Descripción del Item 2' },
-      { name: 'Item 3', description: 'Descripción del Item 3' },
-      { name: 'Item 4', description: 'Descripción del Item 4' },
-      { name: 'Item 5', description: 'Descripción del Item 5' },
-      { name: 'Item 6', description: 'Descripción del Item 6' },
-      { name: 'Item 7', description: 'Descripción del Item 7' },
-      { name: 'Item 8', description: 'Descripción del Item 8' },
-      { name: 'Item 9', description: 'Descripción del Item 9' }
-    ];
+    this.ofertasService.getListarOfertas().subscribe({
+      next: (ofertas: any[]) => {
+        console.log(ofertas);  // Añadir para ver qué datos se están recibiendo
+        this.ofertas = ofertas;
+      },
+      error: (error: any) => {
+        console.error('Error al obtener eventos', error);
+      }
+    });
   }
 }

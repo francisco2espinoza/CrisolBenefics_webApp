@@ -1,2 +1,11 @@
 <!-- ofertas.component.html -->
-<app-grid-display [items]="oferItems"></app-grid-display>
+<div *ngIf="ofertas.length > 0; else noData">
+<div class="grid-container">
+    <div *ngFor="let oferta of ofertas" class="grid-item">
+      <h3>{{ oferta.nombre}}</h3>
+      <p>{{ oferta.categoria }}</p>
+    </div>
+  </div>
+</div>
+
++<!-- <app-grid-display [items]="oferItems"></app-grid-display>-->

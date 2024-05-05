@@ -1,3 +1,15 @@
-<!-- home.component.html -->
+<!-- home.component.html -
 <app-grid-display [items]="homeItems"></app-grid-display>
-  
+-->
+<!-- home.component.html -->
+<div *ngIf="eventos.length > 0; else noData">
+    <h2>Listado de Eventos</h2>
+    <ul>
+      <li *ngFor="let evento of eventos">
+        {{ evento.nombreEvento }} - {{ evento.descripcionEvento }}
+      </li>
+    </ul>
+  </div>
+  <ng-template #noData>
+    <p>No hay eventos disponibles.</p>
+  </ng-template>
