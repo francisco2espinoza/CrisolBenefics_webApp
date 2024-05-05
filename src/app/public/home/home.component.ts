@@ -27,8 +27,9 @@ export class HomeComponent implements OnInit {
   }
 }
 */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { EventoService } from '../../services/evento.service';
+import { NgIfContext } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -37,6 +38,7 @@ import { EventoService } from '../../services/evento.service';
 })
 export class HomeComponent implements OnInit {
   eventos: any[] = [];
+  noData!: TemplateRef<NgIfContext<boolean>> | null;
 
   constructor(private eventoService: EventoService) { }
 
