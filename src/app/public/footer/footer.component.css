@@ -11,4 +11,20 @@
     background-color: darkgrey;
     padding: 20px;
   }
+  .boton-subscribir {
+    padding: 10px 20px; /* Agrega relleno dentro del botón */
+    border-radius: 8px;
+    background-color: #b7bcc2; /* Color de fondo del botón */
+    color: rgb(0, 0, 0); /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Agrega una transición suave */
+  }
   
+  .boton-subscribir:hover {
+    background-color: #7d9ffd; /* Cambia el color de fondo al pasar el ratón por encima */
+  }
+  .caja-suscribir{
+    border-radius: 10px; /* Redondea las esquinas del botón */
+  }
