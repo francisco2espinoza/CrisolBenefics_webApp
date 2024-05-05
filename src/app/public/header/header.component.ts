@@ -1,20 +1,3 @@
-/*
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
-})
-export class HeaderComponent {
-  menuActive = false;
-
-  toggleMenu(): void {
-    this.menuActive = !this.menuActive;
-    console.log("Menu Active:", this.menuActive);
-  }
-}
-*/
 // header.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
