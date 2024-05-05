@@ -66,13 +66,15 @@ nav ul li {
 }
 
 .boton-icono {
-  padding: 7px;
-  border-radius: 10px;
+  background: none; /* Quitar cualquier fondo */
+  border: none;
+  cursor: pointer;
 }
 
 .fa {
-  margin-right: 5px;
-  margin-left: 0px;
+  font-size: 24px; /* Aumentar el tamaño del icono */
+  color: #000; /* Color del ícono */
+  margin-right: 10px; /* Espaciado entre iconos */
 }
 
 /* Estilos adicionales para responsividad y menú hamburguesa */
@@ -86,7 +88,7 @@ nav ul li {
 
 @media (max-width: 768px) {
   .menu-btn {
-    display: block; 
+    display: block;
   }
 
   .menu {

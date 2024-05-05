@@ -1,19 +1,46 @@
 <!-- footer.component.html -->
 <div class="footer-top">
-    <input type="email" placeholder="Subscríbete" class="caja-suscribir">
-    <button class="boton-subscribir">Subscribir</button>
+  <input type="email" placeholder="Subscríbete" class="caja-suscribir">
+  <button class="boton-subscribir">Subscribir</button>
+</div>
+<div class="footer-bottom">
+  <div>
+    <img src="assets/logo-crisol.png" alt="Logo Crisol" style="width: 100px; height: auto;">
+    <p class="texto-destacado">Resumen de Crisol</p>
+    <p class="texto-destacado">Ubicación: Calle Ejemplo 123</p>
+    <p class="texto-destacado">Teléfono: 123-456-7890</p>
   </div>
-  <div class="footer-bottom">
-    <div>
-      <p>Resumen de Crisol</p>
-      <p>Ubicación: Calle Ejemplo 123</p>
-      <p>Teléfono: 123-456-7890</p>
+  <div>
+    <p class="texto-destacado">¿Quieres comunicarte?</p>
+    <p class="texto-destacado">Escríbenos:</p>
+    <div class="social-icons">
+      <button class="icono-texto" (click)="navigateTo('soporte')">
+        <i class="fa fa-cog"></i>
+        <span>Soporte Técnico</span>
+      </button>
+      <button class="icono-texto" (click)="navigateTo('atencion')">
+        <i class="fa fa-headphones"></i>
+        <span>Atención al Cliente</span>
+      </button>
+      <button class="icono-texto" (click)="navigateTo('ubicar')">
+        <i class="fa fa-map-marker"></i>
+        <span>Ubicar Tiendas</span>
+      </button>
     </div>
-    <div>
-      <p>¿Quieres comunicarte?</p>
-    </div>
-    <div>
-      <p>Contáctanos</p>
+    <p class="texto-destacado">Síguenos:</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
     </div>
   </div>
-  
+  <div>
+    <p class="texto-destacado">Contáctanos</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Nombre">
+      <input type="tel" placeholder="Celular">
+      <button class="boton-subscribir">Enviar</button>
+    </form>
+  </div>
+</div>
+

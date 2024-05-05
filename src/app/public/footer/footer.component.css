@@ -1,30 +1,72 @@
 /* footer.component.css */
 .footer-top {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: grey;
-  }
-  .footer-bottom {
-    display: flex;
-    justify-content: space-around;
-    background-color: darkgrey;
-    padding: 20px;
-  }
-  .boton-subscribir {
-    padding: 10px 20px; /* Agrega relleno dentro del botón */
-    border-radius: 8px;
-    background-color: #b7bcc2; /* Color de fondo del botón */
-    color: rgb(0, 0, 0); /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
-    border-radius: 5px; /* Redondea las esquinas del botón */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Agrega una transición suave */
-  }
-  
-  .boton-subscribir:hover {
-    background-color: #7d9ffd; /* Cambia el color de fondo al pasar el ratón por encima */
-  }
-  .caja-suscribir{
-    border-radius: 10px; /* Redondea las esquinas del botón */
-  }
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: grey;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-around;
+  background-color: darkgrey;
+  padding: 20px;
+}
+
+.boton-subscribir {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #b7bcc2;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-subscribir:hover {
+  background-color: #7d9ffd;
+}
+
+.caja-suscribir {
+  border-radius: 10px;
+}
+
+.social-icons, .icono-texto {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.texto-destacado {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.icono-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px; /* Tamaño de fuente para los textos debajo de los iconos de comunicación */
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.fa { /* Estilos específicos para todos los iconos FontAwesome */
+  font-size: 48px; /* Tamaño adecuado para todos los iconos */
+  color: #333; /* Color oscuro para los iconos */
+}
