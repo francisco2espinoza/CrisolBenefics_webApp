@@ -1,4 +1,4 @@
-/* lanzamientos.component.css */
+/* grid-display.component.css */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Crea tres columnas de igual tamaño */

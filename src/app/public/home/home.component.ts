@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public items: any[] = [];
+  public homeItems: any[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
     // Supongamos que estos datos vienen de una API o base de datos
-    this.items = [
+    this.homeItems = [
       { name: 'Item 1', description: 'Descripción del Item 1' },
       { name: 'Item 2', description: 'Descripción del Item 2' },
       { name: 'Item 3', description: 'Descripción del Item 3' },

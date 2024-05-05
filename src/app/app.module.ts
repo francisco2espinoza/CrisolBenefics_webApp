@@ -11,6 +11,7 @@ import { HeaderComponent } from './public/header/header.component';
 import { FooterComponent } from './public/footer/footer.component';
 import { ExperienciasComponent } from './public/experiencias/experiencias.component';
 import { PromocionesComponent } from './public/promociones/promociones.component';
+import { GridDisplayComponent } from './public/grid-display/grid-display.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PromocionesComponent } from './public/promociones/promociones.component
     HeaderComponent,
     FooterComponent,
     ExperienciasComponent,
-    PromocionesComponent
+    PromocionesComponent,
+    GridDisplayComponent
   ],
   imports: [
     BrowserModule,

@@ -1,70 +1,117 @@
 /* header.component.css */
 .header-toptext {
   background-color: rgb(255, 217, 0);
-    padding: 0 20px;
-    width: 100%; /* Ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    text-align: center; /* Centra el texto dentro del contenedor */
+  padding: 0 20px;
+  width: 100%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  text-align: center; /* Centra el texto dentro del contenedor */
 }
-.header-top {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-bottom: 10px;
-  }
-  .header-bottom {
-    margin: 0;
-    background-color: rgb(255, 217, 0);
-    padding: 10px 120px;
-    text-align: center;
-  }
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  nav ul li {
-    padding: 0 10px;
-  }
-  .texto {
-    font-size: 30px; /* Tamaño de la fuente */
-    color: #333; /* Color del texto */
-    font-family: Brush Script MT; /* Familia de fuentes */
-    
-  }
-  .menu {
-    list-style-type: none; /* Quita los puntos de la lista */
-    padding: 0; /* Elimina el relleno predeterminado */
-  }
 
-  .menu li {
-    display: inline-block; /* Muestra los elementos de la lista en línea */
-    margin-right: 100px; /* Espaciado entre elementos de la lista */
-  }
-  
-  .menu li a {
+.header-top {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.header-bottom {
+  margin: 0;
+  background-color: rgb(255, 217, 0);
+  padding: 10px 20px; /* Ajustado para responsividad */
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos de la lista se ajusten al tamaño de la pantalla */
+}
+
+nav ul li {
+  padding: 0 10px;
+}
+
+.texto {
+  font-size: 30px; /* Tamaño de la fuente */
+  color: #333; /* Color del texto */
+  font-family: 'Brush Script MT'; /* Familia de fuentes, asegúrate de tener esta fuente cargada o disponible */
+}
+
+.menu {
+  list-style-type: none; /* Quita los puntos de la lista */
+  padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.menu li {
+  display: inline-block; /* Muestra los elementos de la lista en línea */
+  margin-right: 10px; /* Espaciado ajustado para pantallas pequeñas */
+}
+
+.menu li a {
   font-size: 18px; /* Tamaño de la fuente */
   text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
-  color: #000000; /* Cambia el color del texto a negro (#000) */
+  color: #000000; /* Cambia el color del texto a negro */
 }
+
 .espaciado {
-  padding: 10px; /* Agrega espacio dentro del input */
-  margin-right: -80px; /* Agrega espacio a la derecha del icono */
-  margin-left: 20px; /* Agrega espacio a la izquierda del icono */
-  width: 600px; /* Ancho del input */
+  width: auto; /* Ancho automático para ajustarse al contenedor */
+  max-width: 600px; /* Máximo ancho permitido */
+  padding: 10px;
+  margin: 0 20px; /* Espacio uniforme */
   border-radius: 10px;
 }
+
 .boton-icono {
-  padding: 7px; /* Agrega relleno dentro del botón */
-  border-radius: 10px; /* Redondea las esquinas del botón */
-  
+  padding: 7px;
+  border-radius: 10px;
 }
 
 .fa {
-  margin-right: 5px; /* Agrega espacio a la derecha del icono */
-  margin-left: 0px; /* Agrega espacio a la izquierda del icono */
-  
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+/* Estilos adicionales para responsividad y menú hamburguesa */
+.menu-btn {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; 
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .header-bottom.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .header-bottom {
+    padding: 10px 20px; /* Reducido para ajustarse a pantallas pequeñas */
+  }
+
+  .menu li {
+    margin-right: 10px; /* Ajustado para pantallas pequeñas */
+  }
 }

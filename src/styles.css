@@ -1,13 +1,53 @@
-/* styles.css */
+/* Estilos base */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+input, button {
+  padding: 12px 15px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Para tablets y móviles */
   input, button {
-    padding: 10px;
-    margin: 5px;
+    width: 90%; /* Más ancho para facilitar la interacción */
+    padding: 15px 20px; /* Más grande para fácil acceso */
+    margin: 10px auto; /* Centrado y con más espacio */
+    display: block; /* Asegurar que toma el ancho completo */
   }
-  button {
-    cursor: pointer;
+
+  .header-top, .header-bottom {
+    flex-direction: column; /* Alinear verticalmente para más espacio */
+    align-items: center;
   }
-  
+
+  nav ul {
+    flex-direction: column; /* Los elementos del menú uno debajo del otro */
+  }
+
+  nav ul li {
+    padding: 15px; /* Más espacio alrededor de los links */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Para dispositivos más grandes como tablets en modo horizontal */
+  input, button {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px auto;
+  }
+}
