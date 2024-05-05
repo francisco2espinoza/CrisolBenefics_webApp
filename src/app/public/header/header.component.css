@@ -16,6 +16,18 @@
   margin-bottom: 10px;
 }
 
+.header-top .boton-icono {
+  background: transparent !important; /* Quitar cualquier fondo */
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+}
+.header-top .fa {
+  font-size: 24px !important; /* Aumentar el tamaño del icono */
+  color: #000 !important; /* Color del ícono */
+  margin-right: 10px; /* Espaciado entre iconos */
+}
+
 .header-bottom {
   margin: 0;
   background-color: rgb(255, 217, 0);
@@ -66,8 +78,8 @@ nav ul li {
 }
 
 .boton-icono {
-  background: none; /* Quitar cualquier fondo */
-  border: none;
+  background: none !important; /* Quitar cualquier fondo */
+  border: none !important;
   cursor: pointer;
 }
 
@@ -96,24 +108,38 @@ nav ul li {
     flex-direction: column;
     width: 100%;
   }
-
-  .menu.active {
+/*
+  .menu.active, .header-bottom.active {
     display: flex;
+  }
+*/
+  .menu.active {
+    display: flex; /* El menú se muestra cuando está activo */
+    flex-direction: column; /* Los ítems del menú se muestran en columna */
+    width: 100%; /* Asegura que el menú ocupa todo el ancho disponible */
   }
 
   .header-bottom.active {
-    display: block;
+    display: block; /* Asegura que el contenedor del menú se muestre cuando está activo */
   }
+
+
+
+  
 
   nav ul {
     flex-direction: column;
   }
-
+/*
   .header-bottom {
-    padding: 10px 20px; /* Reducido para ajustarse a pantallas pequeñas */
+    padding: 10px 20px; /* Reducido para ajustarse a pantallas pequeñas 
   }
 
+  */
+  .header-bottom {
+    display: none; /* Oculta el contenedor del menú cuando no está activo */
+  }
   .menu li {
-    margin-right: 10px; /* Ajustado para pantallas pequeñas */
+    margin-right: 0; /* Ajustado para pantallas pequeñas */
   }
 }

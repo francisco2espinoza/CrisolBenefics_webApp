@@ -34,9 +34,9 @@
   <button class="boton-icono"><i class="fa fa-search"></i></button>
   <button class="menu-btn" (click)="toggleMenu()"><i class="fa fa-bars"></i></button> <!-- Botón de menú hamburguesa -->
 
-  <button (click)="navigateTo('perfil')"><i class="fa fa-user"></i></button>
-  <button (click)="navigateTo('ofertas')"><i class="fa fa-gift"></i></button>
-  <button (click)="navigateTo('notificaciones')"><i class="fa fa-bell"></i></button>
+  <button class="boton-icono" (click)="navigateTo('perfil')"><i class="fa fa-user"></i></button>
+  <button class="boton-icono" (click)="navigateTo('ofertas')"><i class="fa fa-gift"></i></button>
+  <button class="boton-icono" (click)="navigateTo('notificaciones')"><i class="fa fa-bell"></i></button>
 </div>
 <div class="header-bottom" [class.active]="menuActive">
   <nav>
