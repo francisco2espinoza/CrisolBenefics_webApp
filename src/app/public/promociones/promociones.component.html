@@ -1,2 +1,13 @@
 <!-- promociones.component.html -->
-<app-grid-display [items]="promItems"></app-grid-display>
+<div class="container-eventos" *ngIf="promociones.length > 0; else noData">
+    <h2>Listado de Promociones</h2>
+    <div class="grid-container">
+      <div *ngFor="let promociones of promociones" class="grid-item">
+        <h3>{{ promociones.nombre}}</h3>
+        <p>{{ promociones.categoria }}</p>
+        <button [routerLink]="['/detalle-oferta', promociones.id_oferta]">Ver Detalles</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <app-grid-display [items]="oferItems"></app-grid-display>-->

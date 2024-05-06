@@ -9,6 +9,7 @@ import { NgIfContext } from '@angular/common';
   styleUrls: ['./ofertas.component.css']
 })
 export class OfertasComponent implements OnInit {
+[x: string]: any;
   ofertas: any[] = [];
   noData!: TemplateRef<NgIfContext<boolean>> | null;
 

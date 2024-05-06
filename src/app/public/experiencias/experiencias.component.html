@@ -1,2 +1,13 @@
-<!-- experiencias.component.html -->
-<app-grid-display [items]="expeItems"></app-grid-display>
+<!-- experiencias.component.html -
+<app-grid-display [items]="homeItems"></app-grid-display>
+-->
+<!-- home.component.html -->
+<div class="container-eventos" *ngIf="eventos.length > 0; else noData">
+    <h2>Experiencias</h2>
+    <div class="grid-container">
+        <div *ngFor="let evento of eventos" class="grid-item">
+          <h3>{{ evento.nombreEvento}}</h3>
+          <p>{{ evento.descripcionEvento }}</p>
+        </div>
+      </div>
+    </div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { EventoService } from '../../services/evento.service';
+import { NgIfContext } from '@angular/common';
 
 @Component({
   selector: 'app-experiencias',
@@ -6,22 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencias.component.css']
 })
 export class ExperienciasComponent implements OnInit {
-  public expeItems: any[] = [];
+  eventos: any[] = [];
+  noData!: TemplateRef<NgIfContext<boolean>> | null;
 
-  constructor() { }
+  constructor(private eventoService: EventoService) { }
 
   ngOnInit(): void {
-    // Supongamos que estos datos vienen de una API o base de datos
-    this.expeItems = [
-      { name: 'Item 1', description: 'Descripción del Item 1' },
-      { name: 'Item 2', description: 'Descripción del Item 2' },
-      { name: 'Item 3', description: 'Descripción del Item 3' },
-      { name: 'Item 4', description: 'Descripción del Item 4' },
-      { name: 'Item 5', description: 'Descripción del Item 5' },
-      { name: 'Item 6', description: 'Descripción del Item 6' },
-      { name: 'Item 7', description: 'Descripción del Item 7' },
-      { name: 'Item 8', description: 'Descripción del Item 8' },
-      { name: 'Item 9', description: 'Descripción del Item 9' }
-    ];
+    this.eventoService.getListarEventos().subscribe({
+      next: (eventos) => {
+        console.log(eventos);  // Añadir para ver qué datos se están recibiendo
+        this.eventos = eventos;
+      },
+      error: (error) => {
+        console.error('Error al obtener eventos', error);
+      }
+    });
   }
 }
