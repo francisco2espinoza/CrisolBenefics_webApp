@@ -1,7 +1,7 @@
 // detalle-oferta.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,15 @@ export class DetalleOfertaService {
 
   constructor(private http: HttpClient) {}
 
+  
   getOfertaPorId(idOferta: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}?id=${idOferta}`);
+    
+    const url = `${this.apiUrl}?id=${idOferta}`;
+    
+    //return this.http.get(`${this.apiUrl}?id=${idOferta}`);
+
+    return this.http.get<{data: any[]}>(url).pipe(
+      map(response => response.data)); // Extrae la propiedad 'data' del objeto de respuesta
+    
   }
 }
