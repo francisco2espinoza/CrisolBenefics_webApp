@@ -13,6 +13,7 @@ import { ExperienciasComponent } from './public/experiencias/experiencias.compon
 import { PromocionesComponent } from './public/promociones/promociones.component';
 import { GridDisplayComponent } from './public/grid-display/grid-display.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetalleOfertaComponent } from './public/detalle-oferta/detalle-oferta.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ExperienciasComponent,
     PromocionesComponent,
-    GridDisplayComponent
+    GridDisplayComponent,
+    DetalleOfertaComponent
   ],
   imports: [
     BrowserModule,

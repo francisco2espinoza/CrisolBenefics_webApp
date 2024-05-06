@@ -1,9 +1,11 @@
 <!-- ofertas.component.html -->
-<div *ngIf="ofertas.length > 0; else noData">
-<div class="grid-container">
+<div class="container-eventos" *ngIf="ofertas.length > 0; else noData">
+  <h2>Listado de Ofertas</h2>
+  <div class="grid-container">
     <div *ngFor="let oferta of ofertas" class="grid-item">
       <h3>{{ oferta.nombre}}</h3>
       <p>{{ oferta.categoria }}</p>
+      <button [routerLink]="['/detalle-oferta', oferta.id_oferta]">Ver Detalles</button>
     </div>
   </div>
 </div>

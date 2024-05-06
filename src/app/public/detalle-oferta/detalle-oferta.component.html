@@ -1,0 +1,11 @@
+<!-- detalle-oferta.component.html -->
+<div *ngIf="oferta">
+    <h2>Detalle de la Oferta</h2>
+    <p><strong>Nombre:</strong> {{ oferta.nombre }}</p>
+    <p><strong>Categoría:</strong> {{ oferta.categoria }}</p>
+    <p><strong>Descripción:</strong> {{ oferta.descripcion }}</p>
+  </div>
+  <ng-template #noData>
+    <p>No se encontraron detalles para esta oferta.</p>
+  </ng-template>
+  

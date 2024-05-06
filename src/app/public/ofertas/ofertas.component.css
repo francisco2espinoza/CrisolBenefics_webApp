@@ -1,3 +1,10 @@
+.container-eventos {
+    text-align: center;  /* Centra el texto del título*/
+    display: flex;
+    flex-direction: column;  /*Organiza los hijos en columna*/
+    align-items: center;  /* Centra los hijos horizontalmente*/
+    justify-content: center;  /* Centra los hijos verticalmente (opcional, dependiendo del diseño)*/
+  }
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Mantiene tres columnas */
