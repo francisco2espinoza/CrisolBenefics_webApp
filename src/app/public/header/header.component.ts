@@ -11,6 +11,7 @@ export class HeaderComponent {
   menuActive = false;
 
   constructor(private router: Router) { }
+  
 
   toggleMenu(): void {
     this.menuActive = !this.menuActive;
