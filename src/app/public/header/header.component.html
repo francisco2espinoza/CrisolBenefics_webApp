@@ -29,14 +29,19 @@
   <p class="texto">"Explorando mundos entre páginas"</p>
 </div>
 <div class="header-top">
-  <img src="assets/logo-crisol.png" alt="Logo Crisol">
-  <input type="text" placeholder="Buscar..." class="espaciado">
-  <button class="boton-icono"><i class="fa fa-search"></i></button>
-  <button class="menu-btn" (click)="toggleMenu()"><i class="fa fa-bars"></i></button> <!-- Botón de menú hamburguesa -->
-
-  <button class="boton-icono" (click)="navigateTo('perfil')"><i class="fa fa-user"></i></button>
-  <button class="boton-icono" (click)="navigateTo('ofertas')"><i class="fa fa-gift"></i></button>
-  <button class="boton-icono" (click)="navigateTo('notificaciones')"><i class="fa fa-bell"></i></button>
+  <div>
+    <img src="assets/logo-crisol.png" alt="Logo Crisol">
+  </div>
+  <div>
+    <input type="text" placeholder="Buscar..." class="espaciado">
+    <button class="boton-icono"><i class="fa fa-search"></i></button>
+  </div>
+  <div>
+    <button class="menu-btn" (click)="toggleMenu()"><i class="fa fa-bars"></i></button> <!-- Botón de menú hamburguesa -->
+    <button class="boton-icono" (click)="navigateTo('perfil')"><i class="fa fa-user"></i></button>
+    <button class="boton-icono" (click)="navigateTo('ofertas')"><i class="fa fa-gift"></i></button>
+    <button class="boton-icono" (click)="navigateTo('notificaciones')"><i class="fa fa-bell"></i></button>
+  </div>  
 </div>
 <div class="header-bottom" [class.active]="menuActive">
   <nav>
