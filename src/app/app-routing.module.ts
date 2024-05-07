@@ -7,6 +7,7 @@ import { LanzamientosComponent } from './public/lanzamientos/lanzamientos.compon
 import { OfertasComponent } from './public/ofertas/ofertas.component';
 import { DetalleOfertaComponent } from './public/detalle-oferta/detalle-oferta.component';
 import { ExitoComponent } from './public/exito/exito.component';
+import { TicketComponent } from './public/ticket/ticket.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,8 +16,8 @@ const routes: Routes = [
   { path: 'lanzamientos', component: LanzamientosComponent },
   { path: 'ofertas', component: OfertasComponent},
   { path: 'detalle-oferta/:id_oferta', component: DetalleOfertaComponent },
-  { path: 'exito', component: ExitoComponent}
-  
+  { path: 'exito', component: ExitoComponent},
+  { path: 'ticket', component: TicketComponent}
 ];
 
 @NgModule({

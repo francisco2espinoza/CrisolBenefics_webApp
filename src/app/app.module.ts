@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetalleOfertaComponent } from './public/detalle-oferta/detalle-oferta.component';
 import { FormsModule } from '@angular/forms';
 import { ExitoComponent } from './public/exito/exito.component';
+import { TicketComponent } from './public/ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ExitoComponent } from './public/exito/exito.component';
     PromocionesComponent,
     GridDisplayComponent,
     DetalleOfertaComponent,
-    ExitoComponent
+    ExitoComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+.container-eventos {
+    text-align: center;  /* Centra el texto del título*/
+    display: flex;
+    flex-direction: column;  /*Organiza los hijos en columna*/
+    align-items: center;  /* Centra los hijos horizontalmente*/
+    justify-content: center;  /* Centra los hijos verticalmente (opcional, dependiendo del diseño)*/
+  }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mantiene tres columnas */
+    grid-gap: 40px; /* Aumentado para más espacio entre las celdas */
+    padding: 20px;
+    margin: auto;
+    max-width: 80%; /* Utiliza solo el 80% del ancho del área disponible */
+}
+
+.grid-item {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px; /* Reducido para hacer los cuadros más compactos */
+    text-align: center;
+    aspect-ratio: 4 / 3; /* Cambiado para que no sean perfectamente cuadrados */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Solo dos columnas en pantallas pequeñas */
+        max-width: 90%; /* Aumenta el ancho en pantallas más pequeñas para mejor uso del espacio */
+        grid-gap: 20px; /* Reduce el espacio entre celdas en pantallas pequeñas */
+    }
+
+    .grid-item {
+        padding: 15px; /* Reduce el padding en dispositivos móviles */
+    }
+}

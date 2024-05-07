@@ -1,0 +1,22 @@
+
+    <h2>Mis Tickets</h2>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id Ticket</th>
+                <th scope="col">evento</th>
+                <th scope="col">fecha de generacion</th>
+                <th scope="col">fecha de vencimiento</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let ticket of ticket">
+                    <tr>
+                        <th scope="row">{{ ticket.id_Ticket }}</th>
+                        <td>  {{ ticket.codigo_QR }}</td>
+                        <td>{{ ticket.fecha_de_generacion }}</td>
+                        <td>{{ ticket.fecha_de_vencimiento }}</td>
+                    </tr>
+            </tbody>
+        </table>
+
+    

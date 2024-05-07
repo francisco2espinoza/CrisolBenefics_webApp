@@ -40,10 +40,10 @@ export class DetalleOfertaComponent implements OnInit {
     const codigoQR = contenido;
     const fechaGeneracion = new Date(); // Fecha actual
     const Fecha_de_vencimiento = new Date(); // Fecha actua
-  
+    Fecha_de_vencimiento.setMonth(Fecha_de_vencimiento.getMonth() + 3);
     const Estado= 'Activo';
     const Id_Oferta = 123;
-    const Id_Usuario= 456;
+    const Id_Usuario= 20;
     const Id_Evento = 789;
 this.detalleOfertaService.insertTicket(
   codigoQR,fechaGeneracion,Estado,Fecha_de_vencimiento,Id_Oferta,Id_Usuario,Id_Evento
