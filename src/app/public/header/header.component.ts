@@ -1,7 +1,8 @@
 // header.component.ts
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AhorroService } from '../../services/ahorrro.service';
+import { NgIfContext } from '@angular/common';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,8 +10,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   menuActive = false;
-
-  constructor(private router: Router) { }
+  ahorrro: any[] = [];
+  noData!: TemplateRef<NgIfContext<boolean>> | null;
+  constructor(private router: Router, private ahorrroService:AhorroService) { }
   
 
   toggleMenu(): void {
@@ -21,5 +23,18 @@ export class HeaderComponent {
   navigateTo(route: string): void {
     this.router.navigateByUrl(`/${route}`);
   }
+
+  ngOnInit(): void {
+    this.ahorrroService.getListarAhorro(20).subscribe({
+      next: (ahorrro: any[]) => {
+        console.log(ahorrro);  // Añadir para ver qué datos se están recibiendo
+        this.ahorrro = ahorrro;
+      },
+      error: (error: any) => {
+        console.error('Error al obtener eventos', error);
+      }
+    });
+  }
+
 }
 

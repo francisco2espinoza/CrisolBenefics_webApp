@@ -6,12 +6,15 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class AhorroService {
-  private apiUrl = 'https://localhost:44309/api/ahorro/listar';
+  private apiUrl = 'https://localhost:44309/api/Ahorro/obtenerAhorro';
 
   constructor(private http: HttpClient) { }
 
-  getListarAhorro(): Observable<any[]> {
-    return this.http.get<{data: any[]}>(this.apiUrl).pipe(
+  getListarAhorro(idusuario:number ): Observable<any[]> {
+    const url = `${this.apiUrl}?idUsuario=${idusuario}`;
+    
+    
+    return this.http.get<{data: any[]}>(url).pipe(
       map(response => response.data) // Extrae la propiedad 'data' del objeto de respuesta
     );
   }

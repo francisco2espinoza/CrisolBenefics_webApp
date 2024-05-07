@@ -37,6 +37,8 @@
     <button class="boton-icono"><i class="fa fa-search"></i></button>
   </div>
   <div>
+    <div *ngFor="let ahorrro of  ahorrro"  > <h3>{{ahorrro.monto_Ahorrado}}</h3></div>
+    
     <button class="menu-btn" (click)="toggleMenu()"><i class="fa fa-bars"></i></button> <!-- Botón de menú hamburguesa -->
     <button class="boton-icono" (click)="navigateTo('perfil')"><i class="fa fa-user"></i></button>
     <button class="boton-icono" (click)="navigateTo('ofertas')"><i class="fa fa-gift"></i></button>
