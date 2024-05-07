@@ -12,12 +12,11 @@
   <h2>Detalle de la Oferta</h2>
   <div class="grid-container">
       <div *ngFor="let oferta of oferta" class="grid-item">
-        <h3>{{ oferta.nombre }}</h3>
+        <div #miDiv>{{ oferta.nombre}}</div>
+        <h3 id="nombre">{{ oferta.nombre }}</h3>
         <p>{{ oferta.categoria }}</p>
-       
-     <!--   <button (click)="onBotonClick()">Insertar Ticket</button>
-        
-        <button [routerLink]="['/detalle-oferta', oferta.id_oferta]">Adquirir</button>-->
+        <button [routerLink]="['/exito']" (click)="onClickInsertTicket()">Insertar Ticket</button>
       </div>
+     
     </div>
   </div>

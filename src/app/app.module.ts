@@ -15,6 +15,7 @@ import { GridDisplayComponent } from './public/grid-display/grid-display.compone
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleOfertaComponent } from './public/detalle-oferta/detalle-oferta.component';
 import { FormsModule } from '@angular/forms';
+import { ExitoComponent } from './public/exito/exito.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     ExperienciasComponent,
     PromocionesComponent,
     GridDisplayComponent,
-    DetalleOfertaComponent
+    DetalleOfertaComponent,
+    ExitoComponent
   ],
   imports: [
     BrowserModule,

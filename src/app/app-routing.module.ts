@@ -6,6 +6,7 @@ import { ExperienciasComponent } from './public/experiencias/experiencias.compon
 import { LanzamientosComponent } from './public/lanzamientos/lanzamientos.component';
 import { OfertasComponent } from './public/ofertas/ofertas.component';
 import { DetalleOfertaComponent } from './public/detalle-oferta/detalle-oferta.component';
+import { ExitoComponent } from './public/exito/exito.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'lanzamientos', component: LanzamientosComponent },
   { path: 'ofertas', component: OfertasComponent},
   { path: 'detalle-oferta/:id_oferta', component: DetalleOfertaComponent },
+  { path: 'exito', component: ExitoComponent}
   
 ];
 

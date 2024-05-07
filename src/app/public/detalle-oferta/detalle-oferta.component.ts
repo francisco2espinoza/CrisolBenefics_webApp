@@ -1,15 +1,16 @@
 // detalle-oferta.component.ts
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, ElementRef, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DetalleOfertaService } from '../../services/detalle-oferta.service';
 import { NgIfContext } from '@angular/common';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-detalle-oferta',
   templateUrl: './detalle-oferta.component.html',
   styleUrls: ['./detalle-oferta.component.css']
 })
 export class DetalleOfertaComponent implements OnInit {
+  @ViewChild('miDiv') miDiv!: ElementRef;
   oferta: any [] = [];
   response: any [] = [];
   noData!: TemplateRef<NgIfContext<boolean>> | null;
@@ -34,45 +35,28 @@ export class DetalleOfertaComponent implements OnInit {
     );
     
   }
-/*
-  // Método que se ejecuta cuando el usuario hace clic en el botón
-  onBotonClick(): void {
-    // Obtener los valores necesarios para llamar a getInsertarTicket
-    const Id_Ticket = 1;
-    const idOferta = 0; // Ajusta esto según la estructura de oferta
-    const codigoQR = '2323'; // Ajusta esto según la estructura de oferta
-    const fechaGeneracion = new Date(); // Ejemplo de fecha de generación actual, ajusta según lo necesario
-    const estado = 'Activo'; // Ejemplo de estado, ajusta según lo necesario
-    const fechaVencimiento = new Date(); // Ejemplo de fecha de vencimiento actual, ajusta según lo necesario
-    fechaVencimiento.setMonth(fechaVencimiento.getMonth()+3)
-    const idUsuario = 5; // Ajusta esto según la estructura de oferta
-    const idEvento = 0; // Ajusta esto según la estructura de oferta
-
-    // Llamar a getInsertarTicket del servicio
-   
-    this.detalleOfertaService.getInsertarTicket(
-      Id_Ticket,
-      codigoQR,
-      fechaGeneracion,
-      estado,
-      fechaVencimiento,
-      idOferta,  
-      idUsuario,
-      idEvento,
-      true,
-      2,
-      6,
-    fechaGeneracion,
-    fechaGeneracion
-
-    ).subscribe({
-      next: (response) => {
-        console.log(response); // Manejar la respuesta si es necesario
-      },
-      error: (error) => {
-        console.error('Error al insertar ticket', error);
-      }
+  onClickInsertTicket(): void {
+    const contenido: string = this.miDiv.nativeElement.innerText;
+    const codigoQR = contenido;
+    const fechaGeneracion = new Date(); // Fecha actual
+    const Fecha_de_vencimiento = new Date(); // Fecha actua
+  
+    const Estado= 'Activo';
+    const Id_Oferta = 123;
+    const Id_Usuario= 456;
+    const Id_Evento = 789;
+this.detalleOfertaService.insertTicket(
+  codigoQR,fechaGeneracion,Estado,Fecha_de_vencimiento,Id_Oferta,Id_Usuario,Id_Evento
+).subscribe({
+  next: (response) => {
+    // Manejar la respuesta aquí
+    console.log('Ticket insertado correctamente', response);
+  
+  },
+  error: (error) => {
+    // Manejar errores aquí
+    console.error('Error al insertar ticket', error);
+   }
     });
   }
-*/
 }
