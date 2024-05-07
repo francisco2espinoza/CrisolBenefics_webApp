@@ -14,6 +14,7 @@ import { PromocionesComponent } from './public/promociones/promociones.component
 import { GridDisplayComponent } from './public/grid-display/grid-display.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleOfertaComponent } from './public/detalle-oferta/detalle-oferta.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { DetalleOfertaComponent } from './public/detalle-oferta/detalle-oferta.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+  
   ],
   providers: [
     provideClientHydration()
